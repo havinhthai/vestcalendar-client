@@ -1,0 +1,74 @@
+@use 'scss' as *;
+
+.vesting-schedule {
+	.thead {
+		min-width: 55px;
+		font-size: 12px;
+		color: black;
+		border: 2px solid var(--currentColor);
+
+		&-years {
+			width: max-content;
+			font-size: 8.25px;
+			padding: 0 6px;
+			font-weight: 300;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 11px;
+
+			&-years {
+				font-size: 9px;
+			}
+		}
+	}
+
+	.tbody,
+	.thead {
+		td,
+		th {
+			text-align: center;
+			border: 2px solid var(--currentColor);
+		}
+	}
+
+	.tbody {
+		td {
+			color: black;
+			font-size: 12px;
+		}
+
+		&-title,
+		&-description {
+			color: #fff !important;
+			background-color: var(--currentColor);
+		}
+
+		&-cliff {
+			color: var(--currentColor) !important;
+		}
+
+		&-empty {
+			background-color: var(--currentColor);
+			opacity: 0.5;
+		}
+
+		&-title {
+			span {
+				width: max-content;
+			}
+		}
+	}
+}
+
+.is_dark {
+	.vesting-schedule {
+		.tbody,
+		.thead {
+			td,
+			th {
+				color: #fff;
+			}
+		}
+	}
+}

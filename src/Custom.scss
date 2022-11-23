@@ -1,0 +1,40 @@
+@use './scss/' as *;
+
+.Toastify {
+    &__toast-container {
+        z-index: 1000000001;
+    }
+
+    &__progress-bar-theme--light {
+        // background: rgb(235, 239, 242);
+        // background: linear-gradient(90deg,
+        //         rgba(235, 239, 242, 1) 0%,
+        //         rgba(142, 242, 255, 1) 100%);
+    }
+
+    &__toast-body {
+        div {
+            font-family: $font-second;
+        }
+    }
+}
+
+.reset-button {
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.modal {
+    z-index: 1000000000;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.white-space-nowrap {
+    white-space: nowrap !important;
+}
+
+.flex-1 {
+    flex: 1;
+}

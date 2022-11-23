@@ -1,0 +1,43 @@
+@use 'scss' as *;
+
+.title {
+    display: block;
+    min-width: 55px;
+}
+
+:global {
+    .modal-content {
+        background-color: var(--bg) !important;
+    }
+
+    .coin-list {
+        &__main {
+            max-width: 100%;
+            overflow-x: auto;
+
+            th {
+                white-space: nowrap;
+                text-align: center;
+
+                &:empty {
+                    & + th {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Modal {
+    &Header {
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+
+        :global(.fa-solid) {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}

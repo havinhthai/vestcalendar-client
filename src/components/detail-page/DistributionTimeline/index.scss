@@ -1,0 +1,99 @@
+@use 'scss' as *;
+
+.distribution {
+    --green: #00d285;
+    --blue: #2c80ff;
+    --border-color: #ccc;
+
+    .heading {
+        &-btn {
+            transition: unset;
+            border-bottom: 2px solid transparent;
+
+            &.active {
+                border-bottom: 2px solid black;
+            }
+
+            &__soon {
+                background-color: red;
+                color: #fff;
+            }
+        }
+    }
+
+    .progress {
+        max-height: 6px;
+
+        &-container {
+            color: #222630;
+            background-color: rgba(28, 172, 255, 0.1875);
+        }
+
+        &-sub {
+            background-color: var(--primary);
+
+            &__next {
+                background-color: red;
+                border-top-right-radius: 99px;
+                border-bottom-right-radius: 99px;
+            }
+        }
+
+        &.next-active {
+            .progress-sub {
+                background-color: var(--primary);
+                border-radius: 0 !important;
+
+                &__next {
+                    border-radius: 0 !important;
+                    border-top-right-radius: 0.25rem !important;
+                    border-bottom-right-radius: 0.25rem !important;
+                }
+            }
+        }
+    }
+
+    .upcoming {
+        color: #222630;
+        background-color: rgba($color: #ffc100, $alpha: 0.1875);
+
+        &-link {
+            color: #3772ff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.is_dark {
+    .distribution {
+        .heading {
+            &-btn {
+                transition: unset;
+                border-bottom: 2px solid transparent;
+
+                &.active {
+                    border-bottom: 2px solid var(--primary);
+                }
+            }
+        }
+
+        .progress {
+            max-height: 6px;
+
+            &-container {
+                color: var(--text);
+                background-color: rgba(28, 172, 255, 0.1875);
+            }
+        }
+
+        .upcoming {
+            color: var(--text);
+            background-color: rgba($color: #ffc100, $alpha: 0.1875);
+
+            &-link {
+                color: var(--primary);
+                text-decoration: underline;
+            }
+        }
+    }
+}

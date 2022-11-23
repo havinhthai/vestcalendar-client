@@ -1,0 +1,23 @@
+@use 'scss/' as *;
+
+.token-supply {
+    .progress {
+        max-height: 6px;
+
+        &-sub {
+            background-color: var(--primary);
+        }
+    }
+
+    .token-item {
+        border-bottom: 1px solid;
+
+        &__title {
+            color: var(--text-black)
+        }
+
+        &__icon {
+            @include size(20px, 20px);
+        }
+    }
+}

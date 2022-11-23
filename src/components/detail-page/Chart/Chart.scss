@@ -1,0 +1,40 @@
+@use 'scss' as *;
+
+.chart {
+    width: 70%;
+    position: relative;
+    z-index: 1;
+
+    &-canvas {
+        max-height: 300px;
+    }
+
+    &-logo {
+        @include absolute ();
+        @include size(149px, 149px);
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        translate: -50% -50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        border-radius: 100%;
+    }
+
+    &-description {
+        width: 30%;
+    }
+
+    &-item {
+        &__color {
+            @include size(15px, 15px);
+            min-width: 15px;
+            max-width: 15px;
+            border: 1px solid #fff;
+        }
+
+        &__text {
+            max-width: 200px;
+        }
+    }
+}

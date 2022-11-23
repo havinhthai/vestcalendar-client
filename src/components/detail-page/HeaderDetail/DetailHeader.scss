@@ -1,0 +1,74 @@
+@use 'scss/' as *;
+
+.detail {
+    --price: #253992;
+
+    &-header {
+        .logo {
+            @include size(48px, 48px);
+            border-radius: 50%;
+            object-fit: cover;
+
+            &.small {
+                @include size(27px, 27px);
+            }
+        }
+
+        .icon {
+            &-button {
+                padding: 6px;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .note {
+            background-color: rgba(28, 172, 255, 0.1875);
+        }
+
+        .brand {
+            font-size: 24px;
+            color: rgb(33, 37, 41);
+        }
+
+        .price {
+            &-main {
+                color: var(--price);
+            }
+
+            &-down {
+                color: rgb(255, 104, 104);
+            }
+
+            &-up {
+                color: #58bd7d;
+            }
+        }
+    }
+
+    .line {
+        border-top: 1px solid var(--line);
+    }
+
+    .font-small {
+        font-size: 11px;
+    }
+}
+
+.is_dark {
+    .detail {
+        --price: #7eb1fc;
+
+        &-header {
+            .note {
+                background-color: rgba(28, 172, 255, 0.1875);
+            }
+
+            .brand {
+                color: #fff;
+            }
+        }
+    }
+}

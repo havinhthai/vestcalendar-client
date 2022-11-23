@@ -1,0 +1,52 @@
+.Text {
+    &Capitalize {
+        text-transform: capitalize;
+    }
+}
+
+.Link {
+    &Content {
+        display: flex;
+        align-items: center;
+        background-color: #e6effb;
+        border-radius: 4px;
+        padding: 0.3em 0.6em;
+
+        color: #101214;
+        font-size: 12px;
+
+        &:hover {
+            background-color: #101214;
+            color: white;
+        }
+
+        &Social {
+            justify-self: flex-end;
+        }
+    }
+
+    &Name {
+    }
+}
+
+:global(.is_dark) {
+    .Link {
+        &Content {
+            background-color: rgba(230, 239, 250, 0.5);
+            color: #e0e8f3;
+        }
+    }
+}
+
+.watchListButton {
+    width: 36px;
+    color: unset;
+    box-sizing: unset;
+    background-color: unset;
+    border-width: unset;
+    border-style: unset;
+}
+
+.watchListButtonIconActive::before {
+    color: yellow;
+}
